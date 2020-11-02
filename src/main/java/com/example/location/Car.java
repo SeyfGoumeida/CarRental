@@ -1,9 +1,32 @@
 package com.example.location;
 
+import java.util.ArrayList;
+
+
 public class Car {
     private String plateNumber;
     private String brand;
     private int price;
+    private boolean rent;
+
+    public boolean isRent() {
+        return rent;
+    }
+
+    public void setRent(boolean rent) {
+        this.rent = rent;
+    }
+
+    ArrayList<Dates> dates = new ArrayList<Dates>();
+
+    public ArrayList<Dates> getDates() {
+        return dates;
+    }
+
+    public void setDates(ArrayList<Dates> dates) {
+        this.dates = dates;
+    }
+
     public Car() {
         super();
     }
@@ -13,6 +36,8 @@ public class Car {
         this.plateNumber = plateNumber;
         this.brand = brand;
         this.price = price;
+        this.rent = false;
+
     }
 
     public String getPlateNumber() {
@@ -39,9 +64,10 @@ public class Car {
         this.price = price;
     }
 
+
     @Override
     public String toString() {
-        return "Car [plateNumber=" + plateNumber + ", brand=" + brand + ", price=" + price + "]";
+        return "Car [plateNumber=" + plateNumber + ", brand=" + brand + ", price=" + price + " , rent ="+ rent + "]";
     }
 
 }
